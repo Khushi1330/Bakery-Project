@@ -11,13 +11,19 @@ This project is a containerized Bakery Management System built using Docker Comp
 - A worker service to process orders asynchronously
 
 All services are containerized and orchestrated via Docker Compose.
+
  🏛️ System Architecture
+ 
  ![image](https://github.com/user-attachments/assets/d4a2c60d-812a-4069-bb1f-a6182e0b912d)
-  Setup Instructions
+ 
+ 
+**Setup Instructions**
 
 **1. Clone the repository **
+
    git clone <repository-link>
    cd bakery-system
+   
 **2.Create a .env file**
 
 **Build and run the system**
@@ -32,7 +38,9 @@ docker-compose up --build
 **RabbitMQ Dashboard**: http://localhost:15672
 
 ![image](https://github.com/user-attachments/assets/a522b956-abac-48d2-95c2-0bc625368f48)
-🔋 Technologies Used
+
+**🔋 Technologies Used**
+
 Backend: Flask, psycopg2 (Postgres connector), pika (RabbitMQ), redis-py
 
 Frontend: React.js
@@ -45,7 +53,9 @@ Messaging: RabbitMQ
 
 Containerization: Docker, Docker Compose
 
+
 **📜 Design Decisions**
+
 Containerization: Each service is isolated, making the system highly maintainable and scalable.
 
 Caching: Redis is used to speed up product listing and reduce database load.
@@ -54,9 +64,10 @@ Asynchronous Processing: RabbitMQ + Worker enables non-blocking order processing
 
 Health Checks: Services have health checks configured to ensure reliability.
 
-**🧹 Clean Up
+**🧹 Clean Up**
+
 To stop and remove all containers:
-**
+
 
 docker-compose down
 
